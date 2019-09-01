@@ -1,0 +1,16 @@
+---
+name: Esteye
+homepage: http://nsetyo.id
+description: Esteye hugo theme
+license: MIT
+# licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+tags:
+  - blog
+  - simple
+features:
+  -
+min_version: 0.1
+
+author:
+  name: Setyo
+  homepage: https://nsetyo.id
