@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ .Site.Title }}</title>
+    <title>{{.Site.Title}}</title>
 </head>
 <body>
-
+    <div class="container">
+        <main>
+            <!-- Ranges through content/posts/*.md -->
+            {{ range (.Paginator 5).Pages }}
+                <div>
+                    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
+                    <div>
+                        <time datetime="{{ .Date }}">
+                            {{ .Date.Format "Mon, Jan 2, 2006" }}
+                        </time>
+                    </div>
+                    <p>{{.Summary}}</p>
+                    <hr>
+                </div>
+            {{ end }}
+            {{ template "_internal/pagination.html" . }}
+        </main>
+    </div>
 </body>
 </html>
