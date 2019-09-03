@@ -5,25 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{.Site.Title}}</title>
+
+    {{ $css := resources.Get "css/style.css" | resources.Fingerprint "sha256" }}
+
+    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity}}" >
 </head>
 <body>
-    <div class="container">
-        <main>
-            <!-- Ranges through content/posts/*.md -->
-            {{ range (.Paginator 5).Pages }}
-                <div>
-                    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-                    <div>
-                        <time datetime="{{ .Date }}">
-                            {{ .Date.Format "Mon, Jan 2, 2006" }}
-                        </time>
-                    </div>
-                    <p>{{.Summary}}</p>
-                    <hr>
-                </div>
+    <header class="mb-4">
+        <div class="container mx-auto p-4 max-w-lg">
+            <h3> {{ .Site.Title }} </h3>
+        </div>
+    </header>
+    <main class="container mx-auto px-4 max-w-lg">
+        {{ range (.Paginator 3).Pages }}
+        <article class="mb-8">
+            <header>
+                <h3 class="text-3xl"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            </header>
+            <div class="my-2 text-sm text-gray-600">
+                <time datetime="{{ .Date }}">
+                    {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </time>
+                {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
+            </div>
+            <div class="leading-relaxed">
+                <p>{{ .Summary }}</p>
+            </div>
+        </article>
+        {{ end }}
+        <nav class="my-8 flex w-auto">
+            {{ if .Paginator.HasPrev }}
+            <a
+                class="bg-transparent p-2 w-24 text-center border border-gray-500"
+                href="{{ .Paginator.Prev.URL | absURL }}">Previous
+            </a>
             {{ end }}
-            {{ template "_internal/pagination.html" . }}
-        </main>
-    </div>
+
+            <span class="p-2 w-auto flex-1 text-center">
+                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+            </span>
+
+            {{ if .Paginator.HasNext }}
+            <a
+                class="bg-transparent p-2 w-24 text-center border border-gray-500"
+                href="{{ .Paginator.Next.URL | absURL }}">Next
+            </a>
+            {{ end }}
+        </nav>
+    </main>
 </body>
 </html>

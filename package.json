@@ -1,0 +1,26 @@
+{
+    "name": "esteye-hugo-theme",
+    "version": "0.1.0",
+    "description": "Esteya Hugo Theme",
+    "main": "index.js",
+    "scripts": {
+        "build": "tailwind build ./assets/css/style.tailwind.css -o ./assets/css/style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/nsetyo/esteye-hugo-theme.git"
+    },
+    "keywords": [
+        "hugo",
+        "themes"
+    ],
+    "author": "nsetyo",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://gitlab.com/nsetyo/esteye-hugo-theme/issues"
+    },
+    "homepage": "https://gitlab.com/nsetyo/esteye-hugo-theme#readme",
+    "devDependencies": {
+        "tailwindcss": "^1.1.2"
+    }
+}
