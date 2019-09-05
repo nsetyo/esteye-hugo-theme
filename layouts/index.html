@@ -6,12 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{.Site.Title}}</title>
 
+    {{ $css := resources.Get "css/style.tailwind.css" | resources.PostCSS }}
 
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-
-    {{ $css := resources.Get "css/style.css" | resources.Fingerprint "sha256" }}
-
-    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity}}" >
+    <link rel="stylesheet" href="{{ $css.Permalink }}">
 </head>
 <body>
     <header>
