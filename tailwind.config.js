@@ -1,10 +1,10 @@
 module.exports = {
     theme: {
-        extend: {
-            fontFamily: {
-                display: 'Pacifico, cursive',
-            },
-        }
+        fontFamily: {
+            header: 'Livvic, sans-serif',
+            sans  : '"Source Sans Pro", sans-serif'
+
+        },
     },
     variants: {
 
