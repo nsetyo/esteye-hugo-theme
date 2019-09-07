@@ -1,5 +1,5 @@
-@import "fonts.css";
-
+@import "font-livvic.css";
+@import "font-sourcesans.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
