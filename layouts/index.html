@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{.Site.Title}}</title>
 
+    <link rel="icon" type="image/png" sizes="24x24" href='{{ "images/favicon.png" | absURL }}'>
+
     {{ $css := resources.Get "css/style.css" | resources.PostCSS }}
 
     <link rel="stylesheet" href="{{ $css.Permalink }}">
 </head>
 <body class="font-sans text-gray-900 leading-tight">
     <div class="container px-6 py-8 mx-auto max-w-xl">
-        <header class="relative z-20 flex justify-between font-header">
-            <h3 class="font-bold text-3xl">
-                <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            </h3>
+        <header class="relative z-20 flex justify-between font-header font-bold text-3xl">
+            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             <div class="block md:hidden">
                 <button id="theOnlyButton" class="flex items-center h-full hover:text-indigo-500">
                     <svg id="menuIcon" class="block w-6 h-6 fill-current"
