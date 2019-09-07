@@ -18,7 +18,7 @@
             <h3 class="font-bold text-2xl">
                 <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
             </h3>
-            <div class="block">
+            <div class="block md:hidden">
                 <button id="theOnlyButton" class="flex items-center h-full hover:text-indigo-500">
                     <svg id="menuIcon" class="block w-6 h-6 fill-current"
                         version="1.1"
@@ -58,21 +58,21 @@
                 </button>
             </div>
         </header>
-        <nav id="navigation" class="fixed block z-10 inset-0 bg-white pt-24 max-w-xl mx-auto hidden">
-            <div class="uppercase p-6">
-                <a href="" class="block mb-8 font-semibold tracking-wide text-sm">Articles</a>
-                <a href="" class="block mb-8 font-semibold tracking-wide text-sm">Projects</a>
-                <a href="" class="block mb-8 font-semibold tracking-wide text-sm">Blogroll</a>
-                <a href="" class="block mb-8 font-semibold tracking-wide text-sm">Contact</a>
+        <nav id="navigation" class="fixed md:relative md:flex z-10 inset-0 bg-white pt-24 md:pt-0 md:mt-4 max-w-xl mx-auto hidden">
+            <div class="uppercase p-6 md:p-0 flex flex-col md:flex-row">
+                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Articles</a>
+                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Projects</a>
+                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Blogroll</a>
+                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Contact</a>
             </div>
         </nav>
-        <section class="mt-12 leading-normal">
+        <main class="mt-12 leading-normal">
             {{ range (.Paginator 3).Pages }}
             <article class="mb-8">
                 <header class="font-header">
                     <h3 class="text-3xl"><a class="hover:text-indigo-500" href="{{ .Permalink }}">{{ .Title }}</a></h3>
                 </header>
-                <div class="my-2 text-sm text-gray-600 font-bold uppercase">
+                <div class="my-2 text-sm text-gray-600 font-semibold uppercase">
                     <time datetime="{{ .Date }}">
                         {{ .Date.Format "Mon, Jan 2, 2006" }}
                     </time>
@@ -83,36 +83,32 @@
                 </div>
             </article>
             {{ end }}
-        </section>
+        </main>
+        <footer class="my-12">
+            <nav class="my-10 flex w-auto text-sm uppercase">
+                {{ if .Paginator.HasPrev }}
+                <a
+                    class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
+                    href="{{ .Paginator.Prev.URL | absURL }}">Previous
+                </a>
+                {{ end }}
+
+                <span class="font-semibold text-gray-600 p-2 w-auto flex-1 text-center
+                {{ if not .Paginator.HasPrev }} ml-24 {{ end }}
+                {{ if not .Paginator.HasNext }} mr-24 {{ end }}
+                ">
+                    Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+                </span>
+
+                {{ if .Paginator.HasNext }}
+                <a
+                    class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
+                    href="{{ .Paginator.Next.URL | absURL }}">Next
+                </a>
+                {{ end }}
+            </nav>
+        </footer>
     </div>
-    <main class="container mx-auto mt-12 px-4 max-w-lg">
-
-        <nav class="my-10 flex w-auto text-sm uppercase">
-            {{ if .Paginator.HasPrev }}
-            <a
-                class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
-                href="{{ .Paginator.Prev.URL | absURL }}">Previous
-            </a>
-            {{ end }}
-
-            <span class="font-bold text-gray-600 p-2 w-auto flex-1 text-center
-            {{ if not .Paginator.HasPrev }} ml-24 {{ end }}
-            {{ if not .Paginator.HasNext }} mr-24 {{ end }}
-            ">
-                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
-            </span>
-
-            {{ if .Paginator.HasNext }}
-            <a
-                class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
-                href="{{ .Paginator.Next.URL | absURL }}">Next
-            </a>
-            {{ end }}
-        </nav>
-    </main>
-    <footer>
-        <nav> </nav>
-    </footer>
     <script>
         let button = document.querySelector('#theOnlyButton');
 
@@ -122,7 +118,6 @@
             });
 
             document.querySelector('#navigation').classList.toggle('hidden');
-
         });
 
     </script>
