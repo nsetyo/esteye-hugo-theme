@@ -8,9 +8,9 @@
 
     <link rel="icon" type="image/png" sizes="24x24" href='{{ "images/favicon.png" | absURL }}'>
 
-    {{ $css := resources.Get "css/style.css" | resources.PostCSS }}
+    {{ $css := resources.Get "css/style.css" | resources.PostCSS | resources.Fingerprint "sha256" }}
 
-    <link rel="stylesheet" href="{{ $css.Permalink }}">
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
 <body class="font-sans text-gray-900 leading-tight">
     <div class="container px-6 py-8 mx-auto max-w-xl">
