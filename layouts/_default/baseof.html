@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
-    <body>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        {{- partial "meta.html" . -}}
+        {{- partial "favicons.html" . -}}
+        {{- partial "styles.html" . -}}
+
+        <title>{{ .Site.Title }}</title>
+    </head>
+<body class="font-sans text-gray-900 leading-tight">
+    <div class="container px-6 py-8 mx-auto max-w-xl">
         {{- partial "header.html" . -}}
-        <div id="content">
         {{- block "main" . }}{{- end }}
-        </div>
         {{- partial "footer.html" . -}}
-    </body>
+    </div>
+</body>
 </html>

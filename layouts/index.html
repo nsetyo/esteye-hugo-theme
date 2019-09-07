@@ -1,123 +1,20 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{.Site.Title}}</title>
-
-    <link rel="icon" type="image/png" sizes="24x24" href='{{ "images/favicon.png" | absURL }}'>
-
-    {{ $css := resources.Get "css/style.css" | resources.PostCSS | resources.Fingerprint "sha256" }}
-
-    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
-</head>
-<body class="font-sans text-gray-900 leading-tight">
-    <div class="container px-6 py-8 mx-auto max-w-xl">
-        <header class="relative z-20 flex justify-between font-header font-bold text-3xl">
-            <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-            <div class="block md:hidden">
-                <button id="theOnlyButton" class="flex items-center h-full hover:text-indigo-500">
-                    <svg id="menuIcon" class="block w-6 h-6 fill-current"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xml:space="preserve"
-                        x="0px"
-                        y="0px"
-                        width="459px" height="459px"
-                        viewBox="0 0 459 459"
-                        style="enable-background:new 0 0 459 459;"
-                        >
-                        <g>
-                            <g id="menu">
-                                <path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
-                            </g>
-                        </g>
-                    </svg>
-                    <svg id="closeIcon" class="hidden w-6 h-6 fill-current"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xml:space="preserve"
-                        x="0px"
-                        y="0px"
-                        width="357px" height="357px"
-                        viewBox="0 0 357 357"
-                        style="enable-background:new 0 0 357 357;"
-                        >
-                            <g>
-                                <g id="close">
-                                    <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3
-                                        214.2,178.5 		"/>
-                                </g>
-                            </g>
-                        </svg>
-                </button>
-            </div>
+{{ define "main" }}
+<main class="mt-12 leading-normal">
+    {{ range (.Paginator 5).Pages }}
+    <article class="mb-8">
+        <header class="font-header">
+            <h3 class="text-3xl"><a class="hover:text-indigo-500" href="{{ .Permalink }}">{{ .Title }}</a></h3>
         </header>
-        <nav id="navigation" class="fixed md:relative md:flex z-10 inset-0 bg-white pt-24 md:pt-0 md:mt-4 max-w-xl mx-auto hidden">
-            <div class="uppercase p-6 md:p-0 flex flex-col md:flex-row">
-                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Articles</a>
-                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Projects</a>
-                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Blogroll</a>
-                <a href="" class="block mb-8 md:mb-0 md:mr-8 font-semibold md:text-gray-600 hover:text-black tracking-wide text-sm">Contact</a>
-            </div>
-        </nav>
-        <main class="mt-12 leading-normal">
-            {{ range (.Paginator 3).Pages }}
-            <article class="mb-8">
-                <header class="font-header">
-                    <h3 class="text-3xl"><a class="hover:text-indigo-500" href="{{ .Permalink }}">{{ .Title }}</a></h3>
-                </header>
-                <div class="my-2 text-sm text-gray-600 font-semibold uppercase">
-                    <time datetime="{{ .Date }}">
-                        {{ .Date.Format "Mon, Jan 2, 2006" }}
-                    </time>
-                    {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
-                </div>
-                <div class="leading-relaxed">
-                    <p>{{ .Summary }}</p>
-                </div>
-            </article>
-            {{ end }}
-        </main>
-        <footer class="my-12">
-            <nav class="my-10 flex w-auto text-sm uppercase">
-                {{ if .Paginator.HasPrev }}
-                <a
-                    class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
-                    href="{{ .Paginator.Prev.URL | absURL }}">Previous
-                </a>
-                {{ end }}
-
-                <span class="font-semibold text-gray-600 p-2 w-auto flex-1 text-center
-                {{ if not .Paginator.HasPrev }} ml-24 {{ end }}
-                {{ if not .Paginator.HasNext }} mr-24 {{ end }}
-                ">
-                    Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
-                </span>
-
-                {{ if .Paginator.HasNext }}
-                <a
-                    class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-indigo-500 hover:border-indigo-500"
-                    href="{{ .Paginator.Next.URL | absURL }}">Next
-                </a>
-                {{ end }}
-            </nav>
-        </footer>
-    </div>
-    <script>
-        let button = document.querySelector('#theOnlyButton');
-
-        button.addEventListener('click', () => {
-            Array.prototype.forEach.call(button.getElementsByTagName('svg'), svg => {
-                svg.classList.toggle('hidden');
-            });
-
-            document.querySelector('#navigation').classList.toggle('hidden');
-        });
-
-    </script>
-</body>
-</html>
+        <div class="my-2 text-sm text-gray-600 font-semibold uppercase">
+            <time datetime="{{ .Date }}">
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+            </time>
+            {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
+        </div>
+        <div class="leading-relaxed">
+            <p>{{ .Summary }}</p>
+        </div>
+    </article>
+    {{ end }}
+</main>
+{{ end }}
