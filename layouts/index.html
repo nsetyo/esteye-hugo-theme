@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{.Site.Title}}</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Livvic:400,600|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
-
     {{ $css := resources.Get "css/style.css" | resources.PostCSS }}
 
     <link rel="stylesheet" href="{{ $css.Permalink }}">
