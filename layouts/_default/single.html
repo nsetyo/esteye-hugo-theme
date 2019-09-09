@@ -1,37 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{.Site.Title}}</title>
-
-    {{ $css := resources.Get "css/style.css" | resources.Fingerprint "sha256" }}
-
-    <link rel="stylesheet" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity}}" >
-</head>
-<body>
-    <header class="mb-4">
-        <div class="container mx-auto p-4 max-w-lg">
-            <h3> <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h3>
+{{ define "main" }}
+<main class="mt-12 leading-normal">
+    <article class="mb-8">
+        <header class="font-header">
+            <h3 class="text-3xl font-semibold">{{ .Title }}</h3>
+        </header>
+        <div class="my-2 text-sm text-gray-600 font-semibold uppercase">
+            <time datetime="{{ .Date }}">
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+            </time>
+            {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
         </div>
-    </header>
-    <main class="container mx-auto px-4 max-w-lg">
-        <article class="mb-8">
-            <header>
-                <h3 class="text-3xl"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-            </header>
-            <div class="my-2 text-sm text-gray-600">
-                <time datetime="{{ .Date }}">
-                    {{ .Date.Format "Mon, Jan 2, 2006" }}
-                </time>
-                {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
-            </div>
-            <div class="leading-relaxed">
-                <p>{{ .Content }}</p>
-            </div>
-        </article>
-
-    </main>
-</body>
-</html>
+        <div class="leading-relaxed"> {{ .Content }} </div>
+    </article>
+</main>
+{{ end }}

@@ -13,10 +13,9 @@
             </time>
             {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
         </div>
-        <div class="leading-relaxed">
-            <p>{{ .Summary }}</p>
-        </div>
+        <div class="leading-relaxed"> {{ .Summary }} </div>
     </article>
     {{ end }}
 </main>
+{{- partial "pagination.html" . -}}
 {{ end }}
