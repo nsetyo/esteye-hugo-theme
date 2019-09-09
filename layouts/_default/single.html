@@ -4,16 +4,11 @@
 
 {{ define "main" }}
 <main class="mt-12 leading-normal">
-    <article class="mb-8 content">
-        <header class="font-header content-header">
+    <article class="mb-8">
+        <header class="font-header">
             <h3 class="text-3xl font-semibold">{{ .Title }}</h3>
         </header>
-        <div class="my-2 text-sm text-gray-600 font-semibold uppercase content-meta">
-            <time datetime="{{ .Date }}">
-                {{ .Date.Format "Mon, Jan 2, 2006" }}
-            </time>
-            {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
-        </div>
+        {{- partial "content-meta.html" . -}}
         <div class="leading-relaxed content-body"> {{ .Content }} </div>
     </article>
 </main>

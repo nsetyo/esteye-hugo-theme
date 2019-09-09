@@ -1,0 +1,6 @@
+<div class="my-2 text-sm text-gray-600 font-semibold uppercase content-meta tracking-wide">
+    <time datetime="{{ .Date }}">
+        {{ .Date.Format "Mon, Jan 2, 2006" }}
+    </time>
+    {{ if isset .Params "author" }} by {{ .Params.author }} {{ end }}
+</div>
