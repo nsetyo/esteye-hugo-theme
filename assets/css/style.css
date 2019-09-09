@@ -8,13 +8,30 @@
 
 
 p > code {
-    @apply px-1 text-sm text-indigo-500 bg-gray-100;
+    @apply .px-1 .text-sm .text-indigo-500 .bg-gray-100;
 }
 
 p, .highlight {
-    @apply mb-4;
+    @apply .mb-4;
 }
 
 .highlight .chroma {
-    @apply p-4 text-sm;
+    @apply .p-4 .text-sm;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+    @apply .mb-1 .font-semibold;
+}
+
+article h3 {
+    @apply .text-2xl;
+}
+
+article h4 {
+    @apply .text-xl;
 }
