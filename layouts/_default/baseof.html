@@ -7,7 +7,7 @@
 
         <title>{{ .Site.Title }}</title>
     </head>
-<body class="font-sans text-gray-900 leading-tight">
+<body class="font-sans text-gray-900 leading-tight {{.Kind}}">
     <div class="container px-6 py-8 mx-auto max-w-xl">
         {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
