@@ -1,9 +1,9 @@
 ---
 name: Esteye
-homepage: http://nsetyo.id
 description: Esteye hugo theme
+homepage: http://nsetyo.id
 license: MIT
-# licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink: https://github.com/nsetyo/esteye-hugo-theme/blob/master/LICENSE
 tags:
   - blog
   - simple
