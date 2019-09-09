@@ -5,7 +5,7 @@
         {{- partial "favicons.html" . -}}
         {{- partial "styles.html" . -}}
 
-        <title>{{ .Site.Title }}</title>
+        <title> {{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     </head>
 <body class="font-sans text-gray-900 leading-tight {{.Kind}}">
     <div class="container px-6 py-8 mx-auto max-w-xl">
