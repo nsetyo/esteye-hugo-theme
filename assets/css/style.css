@@ -24,6 +24,18 @@
     @apply .border-solid .text-primary .border-primary;
 }
 
+.content-body sup {
+    @apply .mx-1;
+}
+
+.content-body sup a:before {
+    content: "[";
+}
+
+.content-body sup a:after {
+    content: "]";
+}
+
 .content-body img {
     @apply
         .border
