@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{.Site.Title}}</title>
-</head>
-<body>
-    <div class="container">
-        <main>
-            <!-- Ranges through content/posts/*.md -->
-            {{ range .Pages }}
-                <div>
-                    <h3><a href="{{.Permalink}}">{{.Title}}</a></h3>
-                    <div>
-                        <time datetime="{{ .Date }}">
-                            {{ .Date.Format "Mon, Jan 2, 2006" }}
-                        </time>
-                    </div>
-                    <p>{{.Summary}}</p>
-                    <hr>
-                </div>
-            {{ end }}
-        </main>
-    </div>
-</body>
-</html>
+{{ define "main" }}
+<main class="mt-12 leading-normal">
+    {{ range (.Paginator 5).Pages }}
+    <article class="mb-8">
+        <header class="font-header">
+            <h2 class="text-3xl font-semibold">
+                <a class="hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+        </header>
+        {{- partial "content-meta.html" . -}}
+        <div class="leading-relaxed content-body"> {{ .Summary }} </div>
+    </article>
+    {{ end }}
+</main>
+{{- partial "pagination.html" . -}}
+{{ end }}
