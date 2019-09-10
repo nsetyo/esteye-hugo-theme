@@ -81,5 +81,5 @@
 }
 
 .highlight .chroma {
-    @apply .p-4 .text-sm;
+    @apply .p-4 .text-sm .overflow-x-scroll;
 }
