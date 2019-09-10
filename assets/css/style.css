@@ -38,6 +38,10 @@
     @apply .mb-4;
 }
 
+.content-body hr {
+    @apply .mb-2 .border-gray-600;
+}
+
 .content-body p  > code,
 .content-body li > code {
     @apply .px-1 .text-sm .text-primary .bg-gray-100;
@@ -95,10 +99,6 @@
 
 .highlight .chroma {
     @apply .p-4 .text-sm .overflow-x-scroll;
-}
-
-.footnotes hr {
-    @apply .mb-2 .border-gray-600;
 }
 
 .footnotes ol {
