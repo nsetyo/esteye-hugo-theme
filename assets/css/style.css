@@ -43,12 +43,21 @@
     @apply .px-1 .text-sm .text-primary .bg-gray-100;
 }
 
-.content-body ul {
-    @apply .mb-4 .list-disc pl-8;
+.content-body ul,
+.content-body ol {
+    @apply .mb-4 .pl-8;
 }
 
 .content-body ol {
-    @apply .mb-4 .list-decimal pl-8;
+    @apply .list-decimal;
+}
+
+.content-body ul {
+    @apply .list-disc;
+}
+
+.content-body li {
+    @apply .pl-1;
 }
 
 .content-body h1,
@@ -86,4 +95,12 @@
 
 .highlight .chroma {
     @apply .p-4 .text-sm .overflow-x-scroll;
+}
+
+.footnotes hr {
+    @apply .mb-2 .border-gray-600;
+}
+
+.footnotes ol {
+    @apply .pl-4;
 }
