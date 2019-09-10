@@ -1,7 +1,7 @@
 {{ define "main" }}
 <main class="mt-12 leading-normal">
-    {{ range (.Paginator 5).Pages }}
-    <article class="mb-8">
+    {{ range .Paginator.Pages }}
+    <article class="mb-12">
         <header class="font-header">
             <h2 class="text-3xl font-semibold">
                 <a class="hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
