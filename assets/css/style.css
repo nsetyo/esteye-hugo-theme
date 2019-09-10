@@ -47,6 +47,10 @@
     @apply .mb-4 .list-disc pl-8;
 }
 
+.content-body ol {
+    @apply .mb-4 .list-decimal pl-8;
+}
+
 .content-body h1,
 .content-body h2,
 .content-body h3,
