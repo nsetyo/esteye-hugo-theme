@@ -1,3 +1,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+{{ if (isset .Params "description") }}
+    {{ $desc := (substr (plainify (.Params "description")) 0 200) }}
+    {{ $.Scratch.Set "description" $desc }}
+{{ else }}
+    {{ $desc := (substr (plainify (.Summary | default .Site.Params.description)) 0 200) }}
+    {{ $.Scratch.Set "description" $desc }}
+{{ end }}
+
+{{ if .IsPage }}
+    {{ $desc := $.Scratch.Get "description" }}
+    {{ $desc := (delimit (slice (chomp $desc) "...") "") }}
+    {{ $.Scratch.Set "description" $desc }}
+{{ end }}
+
+<meta name="description" content='{{ chomp ($.Scratch.Get "description") }}'>
