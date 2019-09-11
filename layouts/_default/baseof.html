@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        {{- partial "meta.html" . -}}
-        {{- partial "favicons.html" . -}}
-        {{- partial "styles.html" . -}}
+        {{- partial "meta.html"             . -}}
+        {{- partial "canonical-url.html"    . -}}
+        {{- partial "rssfeed.html"          . -}}
+        {{- partial "styles.html"           . -}}
+        {{- partial "favicons.html"         . -}}
 
         <title> {{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     </head>

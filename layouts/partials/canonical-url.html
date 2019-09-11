@@ -1,0 +1,7 @@
+{{ if (isset .Params "canonicalurl") }}
+<link rel="canonical"  href='{{ .Params.canonicalurl }}'>
+{{ else if (isset .Site.Params "canonicalurl") }}
+<link rel="canonical"  href='{{ printf "%s%s" .Site.Params.canonicalurl .URL }}'>
+{{ else }}
+<link rel="canonical"  href='{{ .URL | absURL }}'>
+{{ end}}
