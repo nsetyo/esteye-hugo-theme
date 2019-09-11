@@ -1,17 +1,28 @@
 {{ $image := .Get "src" }}
+{{ $link  := .Get "link" }}
 
-{{ if (findRE "(^|:)//" $image) -}}
+{{- if (findRE "(^|:)//" $image) -}}
     {{ $.Scratch.Set "fig_image" $image}}
-{{ else if (findRE "^/" $image) }}
+{{- else if (findRE "^/" $image) -}}
     {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
     {{ $.Scratch.Set "fig_image" (delimit (slice $baseurl_no_trailing_slash $image) "")}}
-{{ else }}
+{{- else -}}
     {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
     {{ $.Scratch.Set "fig_image" (delimit (slice $permalink_pretty $image) "")}}
-{{ end }}
+{{- end -}}
+
+{{- if (findRE "(^|:)//" $link) -}}
+    {{ $.Scratch.Set "fig_link" $link}}
+{{- else if (findRE "^/" $link) -}}
+    {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
+    {{ $.Scratch.Set "fig_link" (delimit (slice $baseurl_no_trailing_slash $link) "")}}
+{{- else -}}
+    {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
+    {{ $.Scratch.Set "fig_link" (delimit (slice $permalink_pretty $link) "")}}
+{{- end -}}
 <figure {{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
-        <a href='{{ .Get "link" }}' {{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+        <a href='{{ $link }}' {{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
     <img src='{{ $.Scratch.Get "fig_image" }}'
          {{- if or (.Get "alt") (.Get "caption") }}
