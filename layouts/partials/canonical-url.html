@@ -1,7 +1,13 @@
-{{ if (isset .Params "canonicalurl") }}
-<link rel="canonical"  href='{{ .Params.canonicalurl }}'>
-{{ else if (isset .Site.Params "canonicalurl") }}
-<link rel="canonical"  href='{{ printf "%s%s" .Site.Params.canonicalurl .URL }}'>
-{{ else }}
-<link rel="canonical"  href='{{ .URL | absURL }}'>
-{{ end}}
+{{- if (isset .Params "canonicalurl") -}}
+    {{ $.Scratch.Set "canonicalurl" (.Params "canonicalurl") }}
+{{- else if (isset .Site.Params "canonicalurl") -}}
+    {{ if (isset .Params "url") }}
+        {{ $.Scratch.Set "canonicalurl" (delimit (slice .Site.Params.canonicalurl .Params.url ) "") }}
+    {{ else }}
+        {{ $.Scratch.Set "canonicalurl" (delimit (slice .Site.Params.canonicalurl .RelPermalink ) "") }}
+    {{ end }}
+{{- else -}}
+    {{ $.Scratch.Set "canonicalurl" (.Permalink | absURL) }}
+{{- end -}}
+
+<link rel="canonical"  href='{{ $.Scratch.Get "canonicalurl" }}'>
