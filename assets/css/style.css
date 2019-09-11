@@ -45,11 +45,16 @@
     min-height: 100px;
 }
 
+.content-body figure img {
+    @apply .mb-0;
+}
+
 .content-body figcaption * {
     @apply .text-sm .font-normal .text-center !important;
 }
 
 .content-body figure,
+.content-body img,
 .content-body p,
 .content-body .highlight {
     @apply .mb-4;
