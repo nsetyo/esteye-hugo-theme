@@ -1,0 +1,13 @@
+<article class="mb-12">
+    <header class="font-header">
+        <h2 class="text-3xl font-semibold">
+            <a class="hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+    </header>
+
+    {{- partial "content-meta.html" . -}}
+
+    <div class="leading-relaxed content-body">
+        {{ .Summary }}
+    </div>
+</article>
