@@ -3,12 +3,8 @@
         <time datetime="{{ .Date }}"> {{ .Date.Format "Mon, 2 January 2006" }} </time>
     </span>
 
-    {{- $author := "" -}}
-    {{- if isset .Params "author" -}}
-        {{- $author = .Params.author -}}
-    {{- else if (isset .Site.Params "author") -}}
-        {{- $author = .Site.Params.author -}}
-    {{- end -}}
+    {{- $author := .Site.Params.author -}}
+    {{- if isset .Params "author" -}} {{- $author = .Params.author -}} {{- end -}}
 
     {{- if $author -}}
     <span class="ml-1">
