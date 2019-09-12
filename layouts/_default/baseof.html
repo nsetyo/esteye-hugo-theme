@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     <head>
-        {{- partial "meta.html"             . -}}
-        {{- partial "canonical-url.html"    . -}}
-        {{- partial "rssfeed.html"          . -}}
-        {{- partial "stylesheet.html"       . -}}
-        {{- partial "favicons.html"         . -}}
+        {{- partial "meta.html"       . -}}
+        {{- partial "favicons.html"   . -}}
+        {{- partial "rssfeed.html"    . -}}
+        {{- partial "stylesheet.html" . -}}
 
         <title> {{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     </head>
 <body class="font-sans text-gray-900 leading-tight {{.Kind}}">
     <div class="container px-6 py-8 mx-auto max-w-xl">
-        {{- partial "header.html" . -}}
-        {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
+        {{- partial "header.html"     . -}}
+        {{- block "main" . }}    {{- end }}
+        {{- partial "footer.html"     . -}}
     </div>
     {{- partial "javascripts.html" . -}}
 </body>
