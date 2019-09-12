@@ -1,26 +1,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-{{ $desc := "" }}
-{{ if (isset .Params "description") }}
-    {{ $desc = (substr (plainify (.Params "description")) 0 200) }}
-{{ else }}
-    {{ $desc = (substr (plainify (.Summary | default .Site.Params.description)) 0 200) }}
-{{ end }}
-{{ if .IsPage }}
-    {{ $desc = (delimit (slice (chomp $desc) "...") "") }}
-{{ end }}
+{{- $desc := "" -}}
+{{- if (isset .Params "description") -}}
+    {{- $desc = (substr (plainify (.Params "description")) 0 200) -}}
+{{- else -}}
+    {{- $desc = (substr (plainify (.Summary | default .Site.Params.description)) 0 200) -}}
+{{- end -}}
+{{- if .IsPage -}}
+    {{- $desc = (delimit (slice (chomp $desc) "...") "") -}}
+{{- end -}}
 <meta name="description" content='{{ chomp $desc }}'>
 
-{{ $canonicalurl := (.Permalink | absURL) }}
+{{- $canonicalurl := (.Permalink | absURL) -}}
 {{- if (isset .Params "canonicalurl") -}}
-    {{ $canonicalurl = (.Params "canonicalurl") }}
+    {{- $canonicalurl = (.Params "canonicalurl") -}}
 {{- else if (isset .Site.Params "canonicalurl") -}}
-    {{ if (isset .Params "url") }}
-        {{ $canonicalurl = (delimit (slice .Site.Params.canonicalurl .Params.url ) "") }}
-    {{ else }}
-        {{ $canonicalurl = (delimit (slice .Site.Params.canonicalurl .RelPermalink ) "") }}
-    {{ end }}
+    {{- if (isset .Params "url") -}}
+        {{- $canonicalurl = (delimit (slice .Site.Params.canonicalurl .Params.url ) "") -}}
+    {{- else -}}
+        {{- $canonicalurl = (delimit (slice .Site.Params.canonicalurl .RelPermalink ) "") -}}
+    {{- end -}}
 {{- end -}}
 <link rel="canonical"  href='{{ $canonicalurl }}'>
