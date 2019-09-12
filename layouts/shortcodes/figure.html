@@ -1,30 +1,30 @@
-{{ $image := .Get "src" }}
+{{ $image := .Get "src"  }}
 {{ $link  := .Get "link" }}
 
 {{- if (findRE "(^|:)//" $image) -}}
-    {{ $.Scratch.Set "fig_image" $image}}
+    {{ $image = $image }}
 {{- else if (findRE "^/" $image) -}}
     {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
-    {{ $.Scratch.Set "fig_image" (delimit (slice $baseurl_no_trailing_slash $image) "")}}
+    {{ $image = (delimit (slice $baseurl_no_trailing_slash $image) "")}}
 {{- else -}}
     {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
-    {{ $.Scratch.Set "fig_image" (delimit (slice $permalink_pretty $image) "")}}
+    {{ $image = (delimit (slice $permalink_pretty $image) "")}}
 {{- end -}}
 
 {{- if (findRE "(^|:)//" $link) -}}
-    {{ $.Scratch.Set "fig_link" $link}}
+    {{ $link = $link }}
 {{- else if (findRE "^/" $link) -}}
     {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
-    {{ $.Scratch.Set "fig_link" (delimit (slice $baseurl_no_trailing_slash $link) "")}}
+    {{ $link = (delimit (slice $baseurl_no_trailing_slash $link) "")}}
 {{- else -}}
     {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
-    {{ $.Scratch.Set "fig_link" (delimit (slice $permalink_pretty $link) "")}}
+    {{ $link = (delimit (slice $permalink_pretty $link) "")}}
 {{- end -}}
 <figure {{ with .Get "class" }} class="{{ . }}"{{ end }}>
     {{- if .Get "link" -}}
         <a href='{{ $link }}' {{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
-    <img src='{{ $.Scratch.Get "fig_image" }}'
+    <img src='{{ $image }}'
          {{- if or (.Get "alt") (.Get "caption") }}
             alt='{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}'
          {{- end -}}

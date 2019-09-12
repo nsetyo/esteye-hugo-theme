@@ -2,32 +2,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+{{ $desc := "" }}
 {{ if (isset .Params "description") }}
-    {{ $desc := (substr (plainify (.Params "description")) 0 200) }}
-    {{ $.Scratch.Set "description" $desc }}
+    {{ $desc = (substr (plainify (.Params "description")) 0 200) }}
 {{ else }}
-    {{ $desc := (substr (plainify (.Summary | default .Site.Params.description)) 0 200) }}
-    {{ $.Scratch.Set "description" $desc }}
+    {{ $desc = (substr (plainify (.Summary | default .Site.Params.description)) 0 200) }}
 {{ end }}
-
 {{ if .IsPage }}
-    {{ $desc := $.Scratch.Get "description" }}
-    {{ $desc := (delimit (slice (chomp $desc) "...") "") }}
-    {{ $.Scratch.Set "description" $desc }}
+    {{ $desc = (delimit (slice (chomp $desc) "...") "") }}
 {{ end }}
+<meta name="description" content='{{ chomp $desc }}'>
 
-<meta name="description" content='{{ chomp ($.Scratch.Get "description") }}'>
-
+{{ $canonicalurl := (.Permalink | absURL) }}
 {{- if (isset .Params "canonicalurl") -}}
-    {{ $.Scratch.Set "canonicalurl" (.Params "canonicalurl") }}
+    {{ $canonicalurl = (.Params "canonicalurl") }}
 {{- else if (isset .Site.Params "canonicalurl") -}}
     {{ if (isset .Params "url") }}
-        {{ $.Scratch.Set "canonicalurl" (delimit (slice .Site.Params.canonicalurl .Params.url ) "") }}
+        {{ $canonicalurl = (delimit (slice .Site.Params.canonicalurl .Params.url ) "") }}
     {{ else }}
-        {{ $.Scratch.Set "canonicalurl" (delimit (slice .Site.Params.canonicalurl .RelPermalink ) "") }}
+        {{ $canonicalurl = (delimit (slice .Site.Params.canonicalurl .RelPermalink ) "") }}
     {{ end }}
-{{- else -}}
-    {{ $.Scratch.Set "canonicalurl" (.Permalink | absURL) }}
 {{- end -}}
-
-<link rel="canonical"  href='{{ $.Scratch.Get "canonicalurl" }}'>
+<link rel="canonical"  href='{{ $canonicalurl }}'>
