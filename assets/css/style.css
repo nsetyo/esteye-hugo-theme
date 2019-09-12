@@ -16,6 +16,10 @@
     }
 }
 
+.content-categories a:not(:last-child)::after {
+    content: ", ";
+}
+
 .content-body a {
     @apply .border-dotted .border-b .border-gray-900 .relative;
 }
