@@ -2,17 +2,32 @@
     <span>
         <time datetime="{{ .Date }}"> {{ .Date.Format "Mon, 2 January 2006" }} </time>
     </span>
+
+    {{- $author := "" -}}
+    {{- if isset .Params "author" -}}
+        {{- $author = .Params.author -}}
+    {{- else if (isset .Site.Params "author") -}}
+        {{- $author = .Site.Params.author -}}
+    {{- end -}}
+
+    {{- if $author -}}
     <span class="ml-1">
-        {{- if isset .Params "author" -}}
-            by {{ .Params.author }}
-        {{- else if (isset .Site.Params "author") -}}
-            by {{ .Site.Params.author }}
-        {{- end -}}
+        by <a class="border-b border-dotted border-gray-600 hover:text-black" href="/">{{ $author }}</a>
     </span>
+    {{- end -}}
+
+    {{- $categories := .Params.categories -}}
+    {{- if $categories -}}
     <span class="ml-1 content-categories">
         on
-        {{ range .Params.categories }}
-            <a class="hover:text-black" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>{{ . }}</a>
+        {{ range $index, $el := $categories }}
+            <a
+                class="border-b border-dotted border-gray-600 hover:text-black mr-1"
+                href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'
+                >
+                {{ . }}{{if lt (add $index 1) (len $categories)}},{{end}}
+            </a>
         {{ end }}
     </span>
+    {{ end }}
 </div>
