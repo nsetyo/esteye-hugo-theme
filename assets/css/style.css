@@ -44,12 +44,16 @@
     @apply .inline;
 }
 
+.content-body figure {
+    @apply .text-center;
+}
+
 .content-body figure img {
-    @apply .mb-0 .block .mx-auto;
+    @apply .mb-0 .mx-auto;
 }
 
 .content-body figcaption * {
-    @apply .text-sm .font-normal .text-center !important;
+    @apply .text-sm .font-normal !important;
 }
 
 .content-body figure,
