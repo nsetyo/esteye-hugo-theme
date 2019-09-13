@@ -1,0 +1,8 @@
+{{- define "main" -}}
+<section class="mt-12 leading-normal">
+    {{- range where .Paginator.Pages "Type" "==" "posts" -}}
+        {{ .Render "summary" }}
+    {{- end -}}
+</section>
+{{- partial "pagination.html" . -}}
+{{- end -}}
