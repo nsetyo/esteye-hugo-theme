@@ -53,8 +53,7 @@
 }
 
 .content-body figure,
-.content-body p,
-.content-body .highlight {
+.content-body p {
     @apply .mb-4;
 }
 
@@ -121,10 +120,16 @@
     @apply .text-base;
 }
 
-.highlight .chroma {
-    @apply .p-4 .text-sm .overflow-x-scroll;
-}
-
 .footnotes ol {
     @apply .pl-4;
+}
+
+.content-body > pre,
+.content-body .highlight {
+    @apply .mb-4;
+}
+
+.highlight > pre,
+.content-body > pre {
+    @apply .p-4 .text-sm .overflow-x-scroll .chroma;
 }
