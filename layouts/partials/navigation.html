@@ -1,8 +1,15 @@
-<nav id="navigation" class="fixed sm:relative sm:flex z-10 inset-0 bg-white pt-24 sm:pt-0 max-w-xl mx-auto hidden">
+<nav
+    id="navigation"
+    class="fixed sm:relative sm:flex z-10 inset-0 bg-white pt-24 sm:pt-0 max-w-xl mx-auto hidden"
+    >
     <div class="uppercase p-6 sm:p-0 flex flex-col sm:flex-row tracking-wide">
-        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Articles</a>
-        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Projects</a>
+        {{ range .Site.Menus.navigation }}
+            <a class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm"
+                href="{{ .URL }}" title="{{ .Title }}" > {{ .Name }}
+            </a>
+        {{ end }}
+        <!-- <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Articles</a>
         <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Blogroll</a>
-        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Contact</a>
+        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Contact</a> -->
     </div>
 </nav>
