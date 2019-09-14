@@ -1,22 +1,24 @@
 <nav class="my-12 flex w-auto text-sm uppercase">
-    {{ if .Paginator.HasPrev }}
+    {{- if .Paginator.HasPrev -}}
     <a
         class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-primary hover:border-primary"
         href="{{ .Paginator.Prev.URL | absURL }}">Previous
     </a>
-    {{ end }}
+    {{- end -}}
 
+    {{- if gt .Paginator.TotalPages 0 -}}
     <span class="font-semibold text-gray-600 p-2 w-auto flex-1 text-center
     {{ if not .Paginator.HasPrev }} ml-24 {{ end }}
     {{ if not .Paginator.HasNext }} mr-24 {{ end }}
     ">
         Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
     </span>
+    {{- end -}}
 
-    {{ if .Paginator.HasNext }}
+    {{- if .Paginator.HasNext -}}
     <a
         class="bg-transparent font-bold p-2 w-24 text-center border border-gray-500 hover:text-white hover:bg-primary hover:border-primary"
         href="{{ .Paginator.Next.URL | absURL }}">Next
     </a>
-    {{ end }}
+    {{- end -}}
 </nav>
