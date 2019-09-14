@@ -1,6 +1,8 @@
 {{- define "main" -}}
+{{- $home_section := .Site.Params.homesection | default (slice "posts") -}}
+
 <section class="mt-12 leading-normal">
-    {{- range where .Paginator.Pages "Type" "==" "posts" -}}
+    {{- range where .Paginator.Pages "Type" "in" $home_section -}}
         {{ .Render "summary" }}
     {{- end -}}
 </section>
