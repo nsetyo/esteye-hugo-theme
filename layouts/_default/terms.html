@@ -3,23 +3,18 @@
 {{- end -}}
 
 {{- define "main" -}}
-<section class="mt-12 leading-normal">
-    <article class="mb-12">
-        <h3 class="font-header mb-2 text-2xl font-semibold"> List of {{ .Title }} </h3>
-        <div class="leading-relaxed content-body">
-            <ol>
-                {{- range .Data.Terms.Alphabetical -}}
-                <li class="mb-4">
-                    <a
-                        class="hover:text-primary font-semibold font-header border-b border-dotted border-gray-900"
-                        href="{{ .Page.Permalink }}"
-                        >
-                        {{ .Page.Title }} ({{ .Count}})
-                    </a>
-                </li>
-                {{- end -}}
-            </ol>
-        </div>
-    </article>
-</section>
+<article class="my-12 leading-normal">
+    <h2 class="font-header mb-2 text-2xl font-semibold">
+        List of {{ .Title }}
+    </h2>
+    <div class="leading-relaxed content-body">
+        <ol> {{- range .Data.Terms.Alphabetical -}}
+            <li class="mb-4">
+                <a class="font-semibold font-header" href="{{ .Page.Permalink }}" >
+                    {{ .Page.Title }} ({{ .Count}})
+                </a>
+            </li>
+        {{- end -}} </ol>
+    </div>
+</article>
 {{- end -}}

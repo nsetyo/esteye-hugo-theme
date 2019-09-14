@@ -1,15 +1,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-{{- $desc := "" -}}
-{{- if (isset .Params "description") -}}
-    {{- $desc = (substr (plainify (.Params "description")) 0 200) -}}
-{{- else -}}
-    {{- $desc = (substr (plainify (.Summary | default .Site.Params.description)) 0 200) -}}
+{{- $desc := plainify (.Params.description | default .Summary | default .Site.Params.description) -}}
+
+{{- if gt (len $desc) (.Site.Params.descLength | default 150) -}}
+    {{- $desc = substr $desc 0 (.Site.Params.descLength | default 150) -}}
+    {{- $desc = delimit (slice $desc "...") "" -}}
 {{- end -}}
-{{- if .IsPage -}}
-    {{- $desc = (delimit (slice (chomp $desc) "...") "") -}}
-{{- end -}}
+
 <meta name="description" content='{{ chomp $desc }}'>
 
 {{- $canonicalurl := (.Permalink | absURL) -}}
