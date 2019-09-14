@@ -1,9 +1,7 @@
 <article class="mb-12">
-    <header class="font-header mb-2">
-        <h2 class="text-3xl font-semibold">
-            <a class="hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
-        </h2>
-    </header>
+    <h2 class="font-header mb-2 text-3xl font-semibold">
+        <a class="hover:text-primary" href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
 
     {{- partial "content-meta.html" . -}}
 
