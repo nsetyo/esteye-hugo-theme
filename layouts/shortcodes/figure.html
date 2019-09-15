@@ -7,7 +7,7 @@
     {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
     {{ $image = (delimit (slice $baseurl_no_trailing_slash $image) "")}}
 {{- else -}}
-    {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
+    {{ $permalink_pretty := $.Page.RelPermalink | replaceRE "\\.html$" "/" }}
     {{ $image = (delimit (slice $permalink_pretty $image) "")}}
 {{- end -}}
 
@@ -17,7 +17,7 @@
     {{ $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" }}
     {{ $link = (delimit (slice $baseurl_no_trailing_slash $link) "")}}
 {{- else -}}
-    {{ $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" }}
+    {{ $permalink_pretty := $.Page.RelPermalink | replaceRE "\\.html$" "/" }}
     {{ $link = (delimit (slice $permalink_pretty $link) "")}}
 {{- end -}}
 <figure {{ with .Get "class" }} class="{{ . }}"{{ end }}>
