@@ -11,14 +11,21 @@
     {{- end -}}
 
     {{- $categories := .Params.categories -}}
+    {{- $is_array   := isset .Params.categories "-1" -}}
     {{- if $categories -}}
     <span class="ml-1">
         on
-        {{ range $index, $el := $categories }}
-            <a class="mr-1" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>
-                {{ . }}{{if lt (add $index 1) (len $categories)}},{{end}}
+        {{- if $is_array -}}
+            {{ range $index, $el := $categories }}
+                <a class="mr-1" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>
+                    {{ . }}{{if lt (add $index 1) (len $categories)}},{{end}}
+                </a>
+            {{ end }}
+        {{- else -}}
+            <a class="mr-1" href='{{ "/categories/" | relLangURL }}{{ $categories | urlize }}'>
+                {{ $categories }}
             </a>
-        {{ end }}
+        {{- end -}}
     </span>
     {{ end }}
 </div>
