@@ -97,6 +97,15 @@
     @apply .mb-0;
 }
 
+.content-body table {
+    @apply .mx-auto .max-w-full .w-full;
+}
+
+.content-body table td,
+.content-body table th {
+    @apply .border .p-2;
+}
+
 .content-body h1,
 .content-body h2,
 .content-body h3,
