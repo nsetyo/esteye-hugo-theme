@@ -4,7 +4,6 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import "syntax.css";
 
 @responsive {
     @variants hover, focus {
@@ -146,7 +145,12 @@
 }
 
 .content--body > pre, .highlight > pre {
-    @apply .p-4 .text-sm .overflow-x-scroll .chroma;
+    @apply .p-4 .text-sm .overflow-x-scroll;
+
+    /* .chroma */
+    background-color: #272822;
+    color           : #f8f8f2;
+
 }
 
 .content--body p  > code,

@@ -1,0 +1,1079 @@
++++ENV="production"
+/* livvic-regular - latin */
+
+@font-face {
+  font-family: 'Livvic';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot'); /* IE9 Compat Modes */
+
+  src: local('Livvic Regular'), local('Livvic-Regular'),
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.svg#Livvic') format('svg'); /* Legacy iOS */
+}
+
+/* livvic-600 - latin */
+
+@font-face {
+  font-family: 'Livvic';
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: url('/fonts/livvic-v2-latin/livvic-v2-latin-600.eot'); /* IE9 Compat Modes */
+
+  src: local('Livvic SemiBold'), local('Livvic-SemiBold'),
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-600.woff') format('woff'), /* Modern Browsers */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-600.svg#Livvic') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-regular - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro Regular'), local('SourceSansPro-Regular'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-regular.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-italic - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: italic;
+
+  font-weight: 400;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro Italic'), local('SourceSansPro-Italic'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-600 - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: normal;
+
+  font-weight: 600;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-700 - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: normal;
+
+  font-weight: 700;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-600italic - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro SemiBold Italic'), local('SourceSansPro-SemiBoldItalic'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-600italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-sans-pro-700italic - latin */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+
+  font-style: italic;
+
+  font-weight: 700;
+
+  src: url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Sans Pro Bold Italic'), local('SourceSansPro-BoldItalic'),
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-sans-pro-v13-latin/source-sans-pro-v13-latin-700italic.svg#SourceSansPro') format('svg'); /* Legacy iOS */
+}
+
+/* source-code-pro-regular - latin */
+
+@font-face {
+  font-family: 'Source Code Pro';
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  src: url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.eot'); /* IE9 Compat Modes */
+
+  src: local('Source Code Pro Regular'), local('SourceCodePro-Regular'),
+         url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('/fonts/source-code-pro-v11-latin/source-code-pro-v11-latin-regular.svg#SourceCodePro') format('svg'); /* Legacy iOS */
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * 1. Prevent padding and border from affecting element width
+ * https://goo.gl/pYtbK7
+ * 2. Change the default font family in all browsers (opinionated)
+ */
+
+html {
+  box-sizing: border-box; /* 1 */
+  font-family: sans-serif; /* 2 */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+
+h1,
+h2,
+h4,
+figure,
+p {
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the system font stack as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ * to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  line-height: 1.5; /* 2 */
+}
+
+/**
+ * Allow adding a border to an element by just adding a border-width.
+ *
+ * By default, the way the browser specifies that an element should have no
+ * border is by setting it's border-style to `none` in the user-agent
+ * stylesheet.
+ *
+ * In order to easily add borders to elements by just setting the `border-width`
+ * property, we change the default border-style for all elements to `solid`, and
+ * use border-width to hide them instead. This way our `border` utilities only
+ * need to set the `border-width` property instead of the entire `border`
+ * shorthand, making our border utilities much more straightforward to compose.
+ *
+ * https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #e2e8f0;
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+input::-webkit-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-moz-placeholder {
+  color: #a0aec0;
+}
+
+input:-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::-ms-input-placeholder {
+  color: #a0aec0;
+}
+
+input::placeholder {
+  color: #a0aec0;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button,
+input {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+/**
+ * Make replaced elements `display: block` by default as that's
+ * the behavior you want almost all of the time. Inspired by
+ * CSS Remedy, with `svg` added as well.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img,
+svg,
+canvas {
+  display: block;
+  vertical-align: middle;
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their instrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.border-gray-500 {
+  border-color: #a0aec0;
+}
+
+.hover\:border-gray-900:hover {
+  border-color: #1a202c;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.font-header {
+  font-family: Livvic, sans-serif;
+}
+
+.font-sans {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-12 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mr-24 {
+  margin-right: 6rem;
+}
+
+.ml-24 {
+  margin-left: 6rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.pt-24 {
+  padding-top: 6rem;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.fill-current {
+  fill: currentColor;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.hover\:text-black:hover {
+  color: #000;
+}
+
+.hover\:text-white:hover {
+  color: #fff;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-24 {
+  width: 6rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.border-gray {
+  border-color: #718096;
+}
+
+.text-gray {
+  color: #718096;
+}
+
+.text-default {
+  color: #1a202c;
+}
+
+.hover\:bg-primary:hover {
+  background-color: #5a67d8;
+}
+
+.hover\:border-primary:hover {
+  border-color: #5a67d8;
+}
+
+.hover\:text-primary:hover {
+  color: #5a67d8;
+}
+
+.hover\:text-default:hover {
+  color: #1a202c;
+}
+
+.content a:hover {
+  border-style: solid;
+  color: #5a67d8;
+  border-color: #5a67d8;
+}
+
+.content a {
+  border-style: dotted;
+  border-bottom-width: 1px;
+  border-color: #1a202c;
+  position: relative;
+}
+
+.content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content h1,
+.content h2,
+.content h4 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.content h1 {
+  font-size: 2.25rem;
+}
+
+.content h2 {
+  font-size: 1.875rem;
+}
+
+.content h4 {
+  font-size: 1.25rem;
+}
+
+/** Content Header ------------------------------------------------------------ */
+
+.content--header {
+  font-family: Livvic, sans-serif;
+}
+
+.content--header a {
+  border-width: 0;
+}
+
+/** Content Meta ------------------------------------------------------------ */
+
+.content--meta a:hover {
+  color: #1a202c;
+  border-color: #718096;
+  border-style: dotted;
+}
+
+/** Content Body ------------------------------------------------------------ */
+
+/** Content Body Images ----------------------------------------------------- */
+
+.content--body figure {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.content--body figure img {
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content--body figcaption * {
+  font-size: 0.875rem !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+.content--body img {
+  display: inline;
+}
+
+/** Content Body List ------------------------------------------------------- */
+
+ .content--body ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.content--body ol {
+  list-style-type: decimal;
+}
+
+.content--body li {
+  padding-left: 0.25rem;
+}
+
+.content--body li p {
+  margin-bottom: 0;
+}
+
+/** Content Body Highlight -------------------------------------------------- */
+
+.content--body .highlight {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/** Content Body Table ------------------------------------------------------ */
+
+/* Footnotes ---------------------------------------------------------------- */
+
+@media (min-width: 640px) {
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:flex-row {
+    flex-direction: row;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .sm\:mr-8 {
+    margin-right: 2rem;
+  }
+
+  .sm\:p-0 {
+    padding: 0;
+  }
+
+  .sm\:pt-0 {
+    padding-top: 0;
+  }
+
+  .sm\:relative {
+    position: relative;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+  }
+
+  .sm\:invisible {
+    visibility: hidden;
+  }
+
+  .sm\:text-gray {
+    color: #718096;
+  }
+}
