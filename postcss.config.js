@@ -1,4 +1,4 @@
-console.log(process.env.HUGO_ENV);
+console.log('+++ENV="'+process.env.HUGO_ENV+'"');
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
     // Specify the paths to all of the template files in your project
