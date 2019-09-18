@@ -4,12 +4,9 @@
     >
     <div class="uppercase p-6 sm:p-0 flex flex-col sm:flex-row tracking-wide">
         {{ range .Site.Menus.navigation }}
-            <a class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm"
+            <a class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray hover:text-black sm:text-sm"
                 href="{{ .URL }}" title="{{ .Title }}" > {{ .Name }}
             </a>
         {{ end }}
-        <!-- <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Articles</a>
-        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Blogroll</a>
-        <a href="" class="block mb-8 sm:mb-0 sm:mr-8 font-semibold sm:text-gray-600 hover:text-black sm:text-sm">Contact</a> -->
     </div>
 </nav>

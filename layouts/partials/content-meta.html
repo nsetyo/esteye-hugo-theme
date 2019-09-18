@@ -1,4 +1,4 @@
-<div class="my-2 text-sm text-gray-600 font-semibold uppercase content-meta tracking-wide">
+<div class="content--meta my-2 text-sm text-gray font-semibold uppercase tracking-wide">
     <span>
         <time datetime="{{ .Date }}"> {{ .Date.Format "Mon, 2 January 2006" }} </time>
     </span>
@@ -7,20 +7,15 @@
     {{- if isset .Params "author" -}} {{- $author = .Params.author -}} {{- end -}}
 
     {{- if $author -}}
-    <span class="ml-1">
-        by <a class="border-b border-dotted border-gray-600 hover:text-black" href="/">{{ $author }}</a>
-    </span>
+    <span class="ml-1"> by <a href="/">{{ $author }}</a> </span>
     {{- end -}}
 
     {{- $categories := .Params.categories -}}
     {{- if $categories -}}
-    <span class="ml-1 content-categories">
+    <span class="ml-1">
         on
         {{ range $index, $el := $categories }}
-            <a
-                class="border-b border-dotted border-gray-600 hover:text-black mr-1"
-                href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'
-                >
+            <a class="mr-1" href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>
                 {{ . }}{{if lt (add $index 1) (len $categories)}},{{end}}
             </a>
         {{ end }}

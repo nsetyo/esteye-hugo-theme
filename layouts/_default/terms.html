@@ -3,11 +3,9 @@
 {{- end -}}
 
 {{- define "main" -}}
-<article class="my-12 leading-normal">
-    <h2 class="font-header mb-2 text-3xl font-semibold">
-        List of {{ .Title }}
-    </h2>
-    <div class="leading-relaxed content-body">
+<article class="content my-12 leading-normal">
+    <h2 class="content--header"> List of {{ .Title }} </h2>
+    <div class="content--body leading-relaxed ">
         <ol> {{- range .Data.Terms.Alphabetical -}}
             <li class="mb-4">
                 <a class="font-semibold font-header" href="{{ .Page.Permalink }}" >

@@ -3,9 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
-<article class="mt-12 leading-normal">
-    <h2 class="font-header text-3xl font-semibold">{{ .Title }}</h2>
+<article class="content mt-12 leading-normal">
+    <h2 class="content--header font-header text-3xl font-semibold">{{ .Title }}</h2>
+
     {{- partial "content-meta.html" . -}}
-    <div class="leading-relaxed content-body"> {{ .Content }} </div>
+
+    <div class="content--body leading-relaxed"> {{ .Content }} </div>
 </article>
 {{ end }}

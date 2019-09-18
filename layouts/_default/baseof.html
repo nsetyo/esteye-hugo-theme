@@ -8,9 +8,10 @@
 
         <title> {{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     </head>
-<body class="font-sans text-gray-900 leading-tight {{.Kind}}">
+<body class="font-sans text-default leading-tight {{.Kind}}">
     <div class="container px-6 py-8 mx-auto max-w-xl">
         {{- partial "header.html"     . -}}
+        {{- partial "navigation.html" . -}}
         {{- block "main" . }}    {{- end }}
         {{- partial "footer.html"     . -}}
     </div>

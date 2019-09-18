@@ -6,148 +6,185 @@
 @import "tailwindcss/utilities";
 @import "syntax.css";
 
-@variants hover {
-    .text-primary {
-        @apply .text-indigo-600;
-    }
+@responsive {
+    @variants hover, focus {
+        .bg-primary {
+            @apply .bg-indigo-600;
+        }
 
-    .bg-primary {
-        @apply .bg-indigo-600;
-    }
+        .border-primary {
+            @apply .border-indigo-600;
+        }
 
-    .border-primary {
-        @apply .border-indigo-600;
+        .text-primary {
+            @apply .text-indigo-600;
+        }
+
+        .bg-gray {
+            @apply .bg-gray-600;
+        }
+
+        .border-gray {
+            @apply .border-gray-600;
+        }
+
+        .text-gray {
+            @apply .text-gray-600;
+        }
+
+        .text-default {
+            @apply .text-gray-900;
+        }
     }
 }
 
-.content-body a {
-    @apply .border-dotted .border-b .border-gray-900 .relative;
-}
-
-.content-body a:hover {
+.content a:hover {
     @apply .border-solid .text-primary .border-primary;
 }
 
-.content-body sup {
-    margin-left: 1px;
+.content a {
+    @apply .border-dotted .border-b .border-gray-900 .relative;
 }
 
-.content-body sup a {
-    @apply .border-0;
-}
-
-.content-body sup a:before {
-    content: "[";
-}
-
-.content-body sup a:after {
-    content: "]";
-}
-
-.content-body img {
-    @apply .inline;
-}
-
-.content-body figure {
-    @apply .text-center;
-}
-
-.content-body figure img {
-    @apply .mb-0 .mx-auto;
-}
-
-.content-body figcaption * {
-    @apply .text-sm .font-normal !important;
-}
-
-.content-body figure,
-.content-body p,
-.content-body > pre,
-.content-body .highlight {
+.content p {
     @apply .my-4;
 }
 
-.content-body hr {
+.content hr {
     @apply .mb-2 .border-gray-600;
 }
 
-.content-body p  > code,
-.content-body li > code {
-    @apply .px-1 .text-sm .text-primary .bg-gray-100;
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+    @apply .mb-4 .mt-8 .font-semibold;
 }
 
-.content-body ul,
-.content-body ol {
-    @apply .mb-4 .pl-8;
-}
-
-.content-body ol {
-    @apply .list-decimal;
-}
-
-.content-body ul {
-    @apply .list-disc;
-}
-
-.content-body li {
-    @apply .pl-1;
-}
-
-.content-body li p {
-    @apply .mb-0;
-}
-
-.content-body table {
-    @apply .mx-auto .max-w-full .w-full;
-}
-
-.content-body table td,
-.content-body table th {
-    @apply .border .p-2;
-}
-
-.content-body h1,
-.content-body h2,
-.content-body h3,
-.content-body h4,
-.content-body h5,
-.content-body h6 {
-    @apply .mb-2 .pb-2 .mt-8 .font-semibold;
-}
-
-.content-body h1 {
+.content h1 {
     @apply .text-4xl;
 }
 
-.content-body h2 {
+.content h2 {
     @apply .text-3xl;
 }
 
-.content-body h3 {
+.content h3 {
     @apply .text-2xl;
 }
 
-.content-body h4 {
+.content h4 {
     @apply .text-xl;
 }
 
-.content-body h5 {
+.content h5 {
     @apply .text-lg;
 }
 
-.content-body h6 {
+.content h6 {
     @apply .text-base;
 }
 
+/** Content Header ------------------------------------------------------------ */
+.content--header {
+    @apply .font-header;
+}
+
+.content--header a {
+    @apply .border-0;
+}
+
+/** Content Meta ------------------------------------------------------------ */
+.content--meta a:hover {
+    @apply .text-default .border-gray .border-dotted;
+}
+
+/** Content Body ------------------------------------------------------------ */
+/** Content Body Images ----------------------------------------------------- */
+.content--body figure {
+    @apply .text-center .my-4;
+}
+
+.content--body figure img {
+    @apply .mb-0 .mx-auto;
+}
+
+.content--body figcaption * {
+    @apply .text-sm .font-normal .m-0 !important;
+}
+
+.content--body img {
+    @apply .inline;
+}
+
+/** Content Body List ------------------------------------------------------- */
+.content--body ul, .content--body ol {
+    @apply .mb-4 .pl-8;
+}
+
+.content--body ol {
+    @apply .list-decimal;
+}
+
+.content--body ul {
+    @apply .list-disc;
+}
+
+.content--body li {
+    @apply .pl-1;
+}
+
+.content--body li p {
+    @apply .mb-0;
+}
+
+/** Content Body Highlight -------------------------------------------------- */
+.content--body .highlight, .content--body > pre {
+    @apply .my-4;
+}
+
+.content--body > pre, .highlight > pre {
+    @apply .p-4 .text-sm .overflow-x-scroll .chroma;
+}
+
+.content--body p  > code,
+.content--body li > code {
+    @apply .px-1 .text-sm .text-primary .bg-gray-100;
+}
+
+/** Content Body Table ------------------------------------------------------ */
+.content--body table {
+    @apply .mx-auto .max-w-full .w-full;
+}
+
+.content--body table td,
+.content--body table th {
+    @apply .border .p-2;
+}
+
+/* Footnotes ---------------------------------------------------------------- */
 .footnotes {
     @apply .mt-8 .mb-4;
 }
 
-.footnotes ol {
+.footnotes ol, .footnote-ref ul {
     @apply .pl-4;
 }
 
-.highlight > pre,
-.content-body > pre {
-    @apply .p-4 .text-sm .overflow-x-scroll .chroma;
+.footnotes li:target {
+    @apply .bg-gray-100 .text-black; transition: all 1s ease-in;
+}
+
+.footnote-ref {
+    margin-left: 1px;
+}
+
+.footnote-ref a:before {
+    content: "[";
+}
+
+.footnote-ref a:after {
+    content: "]";
 }
