@@ -6,8 +6,7 @@ variables:
   HUGO_ENV     : "production"
 
 stages:
-  - build
-  - deploy
+  - test
 
 before_script:
   - apt update && apt install --no-install-recommends -yqq curl ca-certificates
@@ -17,33 +16,8 @@ before_script:
   - hugo version
   - curl -sL https://deb.nodesource.com/setup_12.x | bash -
   - apt update && apt install --no-install-recommends -yqq openssl nodejs git
-  - npm install -g postcss-cli autoprefixer postcss-import netlify-cli
-  - git submodule sync --recursive
-  - git submodule update --init --recursive
-  - cd themes/esteye-hugo-theme && npm install && cd ../..
+  - npm install -g postcss-cli autoprefixer postcss-import
 
-build:
-  stage : build
+test:
+  stage : test
   script: hugo --minify -d public
-  artifacts:
-    paths:
-      - public
-
-deploy:
-  stage : deploy
-  script: netlify deploy --prod -s $NETLIFY_SITE_ID -a $NETLIFY_ACCESS_TOKEN -d public
-  only:
-    - master
-  dependencies:
-    - build
-
-pages:
-  stage : deploy
-  script: /bin/true
-  only:
-    - master
-  artifacts:
-    paths:
-      - public
-  dependencies:
-    - build
