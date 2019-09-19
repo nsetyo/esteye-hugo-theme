@@ -1,8 +1,9 @@
 /* livvic-regular - latin */
 @font-face {
-    font-family: 'Livvic';
-    font-style: normal;
-    font-weight: 400;
+    font-family : 'Livvic';
+    font-display: swap;
+    font-style  : normal;
+    font-weight : 400;
     src: url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot'); /* IE9 Compat Modes */
     src: local('Livvic Regular'), local('Livvic-Regular'),
         url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -14,9 +15,10 @@
 
 /* livvic-600 - latin */
 @font-face {
-    font-family: 'Livvic';
-    font-style: normal;
-    font-weight: 600;
+    font-family : 'Livvic';
+    font-display: swap;
+    font-style  : normal;
+    font-weight : 600;
     src: url('/fonts/livvic-v2-latin/livvic-v2-latin-600.eot'); /* IE9 Compat Modes */
     src: local('Livvic SemiBold'), local('Livvic-SemiBold'),
         url('/fonts/livvic-v2-latin/livvic-v2-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
