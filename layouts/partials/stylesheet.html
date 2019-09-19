@@ -1,5 +1,3 @@
-{{ $mainstyle := resources.Get "css/style.css" | resources.PostCSS }}
-{{ $highlight := resources.Get "css/syntax.css" }}
+{{ $css := resources.Get "css/style.css" | resources.PostCSS | resources.Minify | resources.Fingerprint "sha256" }}
 
-{{ $css := slice $mainstyle $highlight | resources.Concat "css/style.css" | resources.Minify | resources.Fingerprint "sha256" }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
