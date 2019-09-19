@@ -1,17 +1,18 @@
-/* livvic-regular - latin */
+/** livvic-regular - latin */
+/**
 @font-face {
     font-family : 'Livvic';
     font-display: swap;
     font-style  : normal;
     font-weight : 400;
-    src: url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot'); /* IE9 Compat Modes *//**
     src: local('Livvic Regular'), local('Livvic-Regular'),
-        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
-        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.svg#Livvic') format('svg'); /* Legacy iOS */
-}
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 *//**
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers *//**
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.woff') format('woff'), /* Modern Browsers *//**
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS *//**
+        url('/fonts/livvic-v2-latin/livvic-v2-latin-regular.svg#Livvic') format('svg'); /* Legacy iOS *//**
+} */
 
 /* livvic-600 - latin */
 @font-face {
