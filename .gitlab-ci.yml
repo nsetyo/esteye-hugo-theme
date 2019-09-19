@@ -16,7 +16,7 @@ before_script:
   - hugo version
   - curl -sL https://deb.nodesource.com/setup_12.x | bash -
   - apt update && apt install --no-install-recommends -yqq openssl nodejs git
-  - npm install -g postcss-cli autoprefixer postcss-import
+  - npm install -g postcss-cli autoprefixer postcss-import && npm install
 
 test:
   stage : test
