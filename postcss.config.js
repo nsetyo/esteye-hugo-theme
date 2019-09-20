@@ -1,12 +1,16 @@
 const purgecss = require('@fullhuman/postcss-purgecss')({
     // Specify the paths to all of the template files in your project
-    content: [ __dirname + '/layouts/**/*.html' ],
+    content: [
+        __dirname + '/layouts/**/*.html',
+        __dirname + '/../../public/**/*.html'
+    ],
 
     whitelistPatternsChildren: [
         /chroma/,
         /content/,
         /content--body/,
-        /footnote/
+        /footnote/,
+        /highlight/
     ],
 
     // Include any special characters you're using in this regular expression

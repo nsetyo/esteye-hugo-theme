@@ -102,6 +102,10 @@
 }
 
 /** Content Body ------------------------------------------------------------ */
+.content--body strong {
+    @apply .font-semibold;
+}
+
 /** Content Body Images ----------------------------------------------------- */
 .content--body figure {
     @apply .text-center .my-4;
