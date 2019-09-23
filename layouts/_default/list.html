@@ -1,5 +1,5 @@
 {{- define "main" -}}
-<section class="contents mt-12 leading-normal">
+<section class="contents">
     {{- range .Paginator.Pages -}} {{ .Render "summary" }} {{- end -}}
 </section>
 {{- partial "pagination.html" . -}}

@@ -38,6 +38,10 @@
     }
 }
 
+.contents {
+    @apply .mt-12 .leading-normal;
+}
+
 .content a:hover {
     @apply .border-solid .text-primary .border-primary;
 }
