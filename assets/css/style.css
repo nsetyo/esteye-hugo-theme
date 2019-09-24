@@ -37,6 +37,21 @@
     }
 }
 
+/** Navigation Header ------------------------------------------------------- */
+
+#navigation:target nav {
+    @apply .block;
+}
+
+#navigation:target #showmenu {
+    @apply .hidden;
+}
+
+#navigation:target #closemenu {
+    @apply .flex;
+}
+
+/** Main Content ------------------------------------------------------------ */
 .contents {
     @apply .mt-12 .leading-normal;
 }

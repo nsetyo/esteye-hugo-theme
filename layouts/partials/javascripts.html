@@ -1,12 +1,26 @@
 <script>
-    let button = document.querySelector('#theOnlyButton');
+    let navigation = document.querySelector('#navigation nav');
+    let showmenu   = document.querySelector('#showmenu');
+    let closemenu  = document.querySelector('#closemenu');
 
-    button.addEventListener('click', () => {
-        Array.prototype.forEach.call(button.getElementsByTagName('svg'), svg => {
-            svg.classList.toggle('hidden');
-        });
+    showmenu.addEventListener('click', (e) => {
+        e.preventDefault();
 
-        document.querySelector('#navigation').classList.toggle('hidden');
+        showmenu.classList.replace('flex', 'hidden');
+
+        navigation.classList.toggle('hidden');
+
+        closemenu.classList.replace('hidden', 'flex');
+    });
+
+    closemenu.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        closemenu.classList.replace('flex', 'hidden');
+
+        navigation.classList.toggle('hidden');
+
+        showmenu.classList.replace('hidden', 'flex');
     });
 
 </script>
