@@ -14,7 +14,6 @@ module.exports = {
             padding: '1.5rem'
         },
         fontFamily: {
-            header: "Livvic, sans-serif",
             sans  : "'Source Sans Pro', sans-serif",
             mono  : "'Source Code Pro', monospace"
         },

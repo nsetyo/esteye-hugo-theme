@@ -1,4 +1,3 @@
-@import "font-livvic.css";
 @import "font-sourcesans.css";
 @import "font-sourcecode.css";
 @import "tailwindcss/base";
@@ -93,7 +92,7 @@
 
 /** Content Header ------------------------------------------------------------ */
 .content--header {
-    @apply .font-header;
+    @apply .font-sans;
 }
 
 .content--header a {
