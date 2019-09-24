@@ -110,15 +110,13 @@
     @apply .font-semibold;
 }
 
-.content--body h1::before,
-.content--body h2::before,
-.content--body h3::before,
-.content--body h4::before,
-.content--body h5::before,
-.content--body h6::before {
-    @apply .block .-mt-16 .h-16 .invisible;
-
-    content: " ";
+.content--body h1,
+.content--body h2,
+.content--body h3,
+.content--body h4,
+.content--body h5,
+.content--body h6 {
+    @apply .block .-mt-16 .pt-16;
 }
 
 /** Content Body Images ----------------------------------------------------- */
@@ -198,16 +196,23 @@
     @apply .pl-4;
 }
 
+.footnotes li::before {
+    @apply .block .-mt-16 .h-16 .invisible .bg-transparent;
+
+    content: " ";
+}
+
 .footnotes li:target {
     @apply .text-black;
 }
 
 .footnote-ref {
-    margin-left: 1px;
+    @apply .inline-block .-mt-24 .pt-24;
 }
 
 .footnote-ref a:before {
     content: "[";
+    margin-left: 1px;
 }
 
 .footnote-ref a:after {
