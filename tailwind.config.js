@@ -3,10 +3,11 @@ const { colors } = require('tailwindcss/defaultTheme');
 module.exports = {
     theme: {
         colors: {
-            black : colors.black,
-            gray  : colors.gray,
-            indigo: colors.indigo,
-            white : colors.white,
+            black      : colors.black,
+            gray       : colors.gray,
+            indigo     : colors.indigo,
+            transparent: colors.transparent,
+            white      : colors.white,
         },
         container: {
             center : true,

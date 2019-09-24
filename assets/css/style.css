@@ -110,6 +110,17 @@
     @apply .font-semibold;
 }
 
+.content--body h1::before,
+.content--body h2::before,
+.content--body h3::before,
+.content--body h4::before,
+.content--body h5::before,
+.content--body h6::before {
+    @apply .block .-mt-16 .h-16 .invisible;
+
+    content: " ";
+}
+
 /** Content Body Images ----------------------------------------------------- */
 .content--body figure {
     @apply .text-center .my-4;
@@ -188,7 +199,7 @@
 }
 
 .footnotes li:target {
-    @apply .bg-gray-100 .text-black; transition: all 1s ease-in;
+    @apply .text-black;
 }
 
 .footnote-ref {
