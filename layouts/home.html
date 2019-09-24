@@ -2,7 +2,8 @@
 {{- $home_section := .Site.Params.homesection | default (slice "posts") -}}
 
 <section class="contents">
-    {{- range where .Paginator.Pages "Type" "in" $home_section -}}
+    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" $home_section) -}}
+    {{- range $paginator.Pages -}}
         {{ .Render "summary" }}
     {{- end -}}
 </section>

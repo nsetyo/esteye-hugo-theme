@@ -24,7 +24,7 @@
             {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{- end -}}
         {{- $home_section := .Site.Params.homesection | default (slice "posts") -}}
-        {{- range where .Pages "Type" "in" $home_section -}}
+        {{- range where .Site.RegularPages "Type" "in" $home_section -}}
         <item>
             <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
