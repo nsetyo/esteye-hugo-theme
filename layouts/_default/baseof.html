@@ -9,12 +9,18 @@
         <title> {{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
     </head>
 <body class="font-sans text-default leading-tight {{.Kind}}">
-    <div class="container px-6 py-8 mx-auto max-w-xl">
-        {{- partial "header.html"     . -}}
-        {{- partial "navigation.html" . -}}
-        {{- block "main" . }}    {{- end }}
-        {{- partial "footer.html"     . -}}
+    <div class="w-full fixed bg-white z-20 shadow">
+        <div class="container px-6 py-2 mx-auto max-w-xl flex items-center justify-between">
+            {{- partial "header.html"     . -}}
+            {{- partial "navigation.html" . -}}
+        </div>
     </div>
-    {{- partial "javascripts.html" . -}}
+    <div class="pt-16">
+        <div class="container px-6 mx-auto max-w-xl">
+            {{- block "main" . -}}   {{- end -}}
+            {{- partial "footer.html"      . -}}
+            {{- partial "javascripts.html" . -}}
+        </div>
+    </div>
 </body>
 </html>
