@@ -8,6 +8,10 @@ module.exports = {
             indigo: colors.indigo,
             white : colors.white,
         },
+        container: {
+            center : true,
+            padding: '1.5rem'
+        },
         fontFamily: {
             header: "Livvic, sans-serif",
             sans  : "'Source Sans Pro', sans-serif",

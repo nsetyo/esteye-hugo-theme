@@ -1,42 +1,13 @@
-<header class="z-30 relative w-full sm:w-auto flex justify-between">
+<div class="z-30 relative w-full sm:w-auto flex justify-between">
     <h1 class="font-bold text-3xl"><a href="/" class="hover:text-primary">{{ .Site.Title }}</a></h1>
     <div class="block sm:invisible sm:hidden">
         <button id="theOnlyButton" class="flex items-center h-full hover:text-primary">
-            <svg id="menuIcon" class="block w-6 h-6 fill-current"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xml:space="preserve"
-                x="0px"
-                y="0px"
-                width="459px" height="459px"
-                viewBox="0 0 459 459"
-                style="enable-background:new 0 0 459 459;"
-                >
-                <g>
-                    <g id="menu">
-                        <path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
-                    </g>
-                </g>
+            <svg id="menuIcon" class="block w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 459 459">
+                <path d="M0,382.5h459v-51H0V382.5z M0,255h459v-51H0V255z M0,76.5v51h459v-51H0z"/>
             </svg>
-            <svg id="closeIcon" class="hidden w-6 h-6 fill-current"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xml:space="preserve"
-                x="0px"
-                y="0px"
-                width="357px" height="357px"
-                viewBox="0 0 357 357"
-                style="enable-background:new 0 0 357 357;"
-                >
-                    <g>
-                        <g id="close">
-                            <polygon points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3
-                                214.2,178.5 		"/>
-                        </g>
-                    </g>
-                </svg>
+            <svg id="closeIcon" class="hidden w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 357 357">
+                <path d="M357 35.7L321.3 0 178.5 142.8 35.7 0 0 35.7l142.8 142.8L0 321.3 35.7 357l142.8-142.8L321.3 357l35.7-35.7-142.8-142.8z"/>
+            </svg>
         </button>
     </div>
-</header>
+</div>
