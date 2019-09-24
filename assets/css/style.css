@@ -161,8 +161,8 @@
     @apply .my-4 .font-mono;
 }
 
-.content--body > pre, .highlight > pre {
-    @apply .p-4 .text-sm .overflow-x-scroll .chroma;
+.content--body > pre, .highlight > pre, .highlight .chroma {
+    @apply .p-4 .text-sm .overflow-x-scroll .chroma .font-mono;
 }
 
 .content--body p  > code,
