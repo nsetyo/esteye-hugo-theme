@@ -158,7 +158,7 @@
 
 /** Content Body Highlight -------------------------------------------------- */
 .content--body .highlight, .content--body > pre {
-    @apply .my-4;
+    @apply .my-4 .font-mono;
 }
 
 .content--body > pre, .highlight > pre {
@@ -167,7 +167,7 @@
 
 .content--body p  > code,
 .content--body li > code {
-    @apply .px-1 .text-sm .text-primary .bg-gray-100;
+    @apply .px-1 .text-sm .text-primary .bg-gray-100 .font-mono;
 }
 
 /** Content Body Table ------------------------------------------------------ */
