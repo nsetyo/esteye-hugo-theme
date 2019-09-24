@@ -172,6 +172,12 @@
     @apply .border .p-2;
 }
 
+/** Content Body Demo ------------------------------------------------------- */
+
+.content--body .demo {
+    @apply .flex .border .p-4 .items-center .justify-center .bg-gray-100;
+}
+
 /* Footnotes ---------------------------------------------------------------- */
 .footnotes {
     @apply .mt-8 .mb-4;
