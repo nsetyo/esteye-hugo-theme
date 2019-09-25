@@ -12,7 +12,6 @@
     <header class="w-full fixed bg-white z-20 shadow">
         <div id="navigation" class="container py-2 max-w-xl flex items-center justify-between">
             {{- partial "header.html"     . -}}
-            {{- partial "navigation.html" . -}}
         </div>
     </header>
     <main class="pt-16">
@@ -20,7 +19,11 @@
             {{- block "main" . -}}   {{- end -}}
         </div>
     </main>
-    {{- partial "footer.html"      . -}}
+    <footer>
+        <div class="container max-w-xl">
+            {{- partial "footer.html"      . -}}
+        </div>
+    </footer>
     {{- partial "javascripts.html" . -}}
 </body>
 </html>
