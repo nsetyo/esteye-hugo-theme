@@ -1,26 +1,13 @@
 <script>
-    let navigation = document.querySelector('#navigation nav');
-    let showmenu   = document.querySelector('#showmenu');
-    let closemenu  = document.querySelector('#closemenu');
+    let menutoggler = document.querySelectorAll('.menu-toggler');
 
-    showmenu.addEventListener('click', (e) => {
-        e.preventDefault();
+    menutoggler.forEach(button => {
+        button.addEventListener('click', e => {
+            document.querySelector('#navigation nav').classList.toggle('hidden');
 
-        showmenu.classList.replace('flex', 'hidden');
+            menutoggler.forEach(a => a.classList.toggle('hidden'));
 
-        navigation.classList.toggle('hidden');
-
-        closemenu.classList.replace('hidden', 'flex');
+            e.preventDefault();
+        });
     });
-
-    closemenu.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        closemenu.classList.replace('flex', 'hidden');
-
-        navigation.classList.toggle('hidden');
-
-        showmenu.classList.replace('hidden', 'flex');
-    });
-
 </script>
