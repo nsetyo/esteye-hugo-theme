@@ -6,6 +6,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     ],
 
     whitelistPatternsChildren: [
+        /tt code kbd samp/,
         /chroma/,
         /content/,
         /content--body/,

@@ -37,6 +37,9 @@
     }
 }
 
+/* purgecss ignore */
+tt, code, kbd, samp { @apply .font-mono; }
+
 /** Navigation Header ------------------------------------------------------- */
 #progress {
     background: linear-gradient(
