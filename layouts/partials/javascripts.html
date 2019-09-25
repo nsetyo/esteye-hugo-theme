@@ -10,4 +10,14 @@
             e.preventDefault();
         });
     });
+
+    document.addEventListener('scroll', () => {
+        let progressbar  = document.querySelector('#progress');
+        let html         = document.documentElement;
+        let scrollTop    = html.scrollTop    || document.body.scrollTop;
+        let scrollHeight = html.scrollHeight || document.body.scrollHeight;
+        let scroll       = scrollTop / (scrollHeight - html.clientHeight) * 100;
+
+        progressbar.style.setProperty('--progress', scroll+'%');
+    });
 </script>

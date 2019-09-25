@@ -38,6 +38,13 @@
 }
 
 /** Navigation Header ------------------------------------------------------- */
+#progress {
+    background: linear-gradient(
+        to right,
+        theme('colors.indigo.600') var(--progress),
+        theme('colors.transparent') 0
+    );
+}
 
 #navigation:target nav {
     @apply .block;
