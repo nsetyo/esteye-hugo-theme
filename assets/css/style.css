@@ -116,98 +116,98 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 /** Content Header ------------------------------------------------------------ */
-.content--header {
+.content-header {
     @apply .font-sans;
 }
 
-.content--header a {
+.content-header a {
     @apply .border-0;
 }
 
 /** Content Meta ------------------------------------------------------------ */
-.content--meta a:hover {
+.content-meta a:hover {
     @apply .text-default .border-gray .border-dotted;
 }
 
 /** Content Body ------------------------------------------------------------ */
-.content--body strong {
+.content-body strong {
     @apply .font-semibold;
 }
 
-.content--body h1,
-.content--body h2,
-.content--body h3,
-.content--body h4,
-.content--body h5,
-.content--body h6 {
+.content-body h1,
+.content-body h2,
+.content-body h3,
+.content-body h4,
+.content-body h5,
+.content-body h6 {
     @apply .block .-mt-16 .pt-16;
 }
 
 /** Content Body Images ----------------------------------------------------- */
-.content--body figure {
+.content-body figure {
     @apply .text-center .my-4;
 }
 
-.content--body figure img {
+.content-body figure img {
     @apply .mb-0 .mx-auto;
 }
 
-.content--body figcaption * {
+.content-body figcaption * {
     @apply .text-sm .font-normal .m-0 !important;
 }
 
-.content--body img {
+.content-body img {
     @apply .inline;
 }
 
 /** Content Body List ------------------------------------------------------- */
-.content--body ul, .content--body ol {
+.content-body ul, .content-body ol {
     @apply .mb-4 .pl-8;
 }
 
-.content--body ol {
+.content-body ol {
     @apply .list-decimal;
 }
 
-.content--body ul {
+.content-body ul {
     @apply .list-disc;
 }
 
-.content--body li {
+.content-body li {
     @apply .pl-1;
 }
 
-.content--body li p {
+.content-body li p {
     @apply .mb-0;
 }
 
 /** Content Body Highlight -------------------------------------------------- */
-.content--body .highlight, .content--body > pre {
+.content-body .highlight, .content-body > pre {
     @apply .my-4 .font-mono;
 }
 
-.content--body > pre, .highlight > pre, .highlight .chroma {
+.content-body > pre, .highlight > pre, .highlight .chroma {
     @apply .p-4 .text-sm .overflow-x-scroll .chroma .font-mono;
 }
 
-.content--body p  > code,
-.content--body li > code {
+.content-body p  > code,
+.content-body li > code {
     @apply .px-1 .text-sm .text-primary .bg-gray-100 .font-mono;
 }
 
 /** Content Body Table ------------------------------------------------------ */
-.content--body table {
+.content-body table {
     @apply .mx-auto .max-w-full .w-full;
 }
 
-.content--body table td,
-.content--body table th {
+.content-body table td,
+.content-body table th {
     @apply .border .p-2;
 }
 
 /** Content Body Demo ------------------------------------------------------- */
 
-.content--body .demo {
+.content-body .demo {
     @apply .flex .border .p-4 .items-center .justify-center .bg-gray-100;
 }
 

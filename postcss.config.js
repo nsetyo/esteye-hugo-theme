@@ -9,7 +9,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
         /tt code kbd samp/,
         /chroma/,
         /content/,
-        /content--body/,
+        /content-body/,
         /footnote/,
         /highlight/
     ],
