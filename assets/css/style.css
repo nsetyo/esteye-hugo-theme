@@ -160,6 +160,11 @@ tt, code, kbd, samp { @apply .font-mono; }
     @apply .inline;
 }
 
+/** Content Body Blockquote ------------------------------------------------- */
+.content-body blockquote {
+    @apply .pl-4 .text-gray-600 .border-l-4
+}
+
 /** Content Body List ------------------------------------------------------- */
 .content-body ul, .content-body ol {
     @apply .mb-4 .pl-8;
