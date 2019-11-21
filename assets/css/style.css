@@ -145,7 +145,7 @@ tt, code, kbd, samp { @apply .font-mono; }
 
 /** Content Body Images ----------------------------------------------------- */
 .content-body figure {
-    @apply .text-center .my-4;
+    @apply .text-center .my-4 .bg-gray-200 .border;
 }
 
 .content-body figure img {
@@ -153,7 +153,7 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 .content-body figcaption * {
-    @apply .text-sm .font-normal .m-0 !important;
+    @apply .text-sm .font-normal .m-0 !important .text-gray-700 .my-2;
 }
 
 .content-body img {
@@ -192,7 +192,7 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 .content-body > pre, .highlight > pre, .highlight .chroma {
-    @apply .p-4 .text-sm .overflow-x-scroll .chroma .font-mono;
+    @apply .p-4 .text-sm .overflow-x-auto .chroma .font-mono;
 }
 
 .content-body p  > code,
