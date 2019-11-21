@@ -1,8 +1,9 @@
-@import "font-sourcesans.css";
-@import "font-sourcecode.css";
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "font-sourcesans.css";
+@import "font-sourcecode.css";
 @import "syntax.css";
 
 @responsive {
@@ -79,7 +80,7 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 .content hr {
-    @apply .mb-2 .border-gray-600;
+    @apply .mb-2 .border-gray;
 }
 
 .content h1,
@@ -162,7 +163,7 @@ tt, code, kbd, samp { @apply .font-mono; }
 
 /** Content Body Blockquote ------------------------------------------------- */
 .content-body blockquote {
-    @apply .pl-4 .text-gray-600 .border-l-4
+    @apply .pl-4 .text-gray-600 .border-l-4 .mx-0 my-2;
 }
 
 /** Content Body List ------------------------------------------------------- */
