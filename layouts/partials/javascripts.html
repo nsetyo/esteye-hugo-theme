@@ -12,12 +12,19 @@
     });
 
     document.addEventListener('scroll', () => {
-        let progressbar  = document.querySelector('#progress');
-        let html         = document.documentElement;
-        let scrollTop    = html.scrollTop    || document.body.scrollTop;
-        let scrollHeight = html.scrollHeight || document.body.scrollHeight;
-        let scroll       = scrollTop / (scrollHeight - html.clientHeight) * 100;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+        const scroll = scrollTop / (scrollHeight - document.documentElement.clientHeight) * 100;
 
-        progressbar.style.setProperty('--progress', scroll+'%');
+        const header = document.querySelector('body > header');
+        const progressbar = document.querySelector('#progress');
+
+        progressbar.style.setProperty('--progress', scroll + '%');
+
+        if (scroll > 0) {
+            header.classList.add('shadow-sm')
+        } else {
+            header.classList.remove('shadow-sm')
+        }
     });
 </script>
