@@ -1,7 +1,8 @@
 <nav class="my-12 flex w-auto text-sm uppercase">
     {{- if .Paginator.HasPrev -}}
-    <a class="bg-transparent font-bold p-2 w-24 text-center border border-gray-400 hover:text-white hover:bg-primary hover:border-primary"
-        href="{{ .Paginator.Prev.URL | absURL }}">Previous
+    <a class="bg-transparent font-bold py-2 w-24 text-left hover:text-primary"
+        href="{{ .Paginator.Prev.URL | absURL }}">
+        Previous
     </a>
     {{- end -}}
 
@@ -13,8 +14,9 @@
     {{- end -}}
 
     {{- if .Paginator.HasNext -}}
-    <a class="bg-transparent font-bold p-2 w-24 text-center border border-gray-400 hover:text-white hover:bg-primary hover:border-primary"
-        href="{{ .Paginator.Next.URL | absURL }}">Next
+    <a class="bg-transparent font-bold py-2 w-24 text-right hover:text-primary"
+        href="{{ .Paginator.Next.URL | absURL }}">
+        Next
     </a>
     {{- end -}}
 </nav>
