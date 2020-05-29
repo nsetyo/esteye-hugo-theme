@@ -4,7 +4,6 @@
 
 @import "font-sourcesans.css";
 @import "font-sourcecode.css";
-@import "syntax.css";
 
 @responsive {
     @variants hover, focus {
@@ -192,8 +191,8 @@ tt, code, kbd, samp { @apply .font-mono; }
     @apply .my-4 .font-mono;
 }
 
-.content-body > pre, .highlight > pre, .highlight .chroma {
-    @apply .p-4 .text-sm .overflow-x-auto .chroma .font-mono;
+.content-body > pre, .highlight > pre {
+    @apply .p-4 .text-sm .overflow-x-auto .font-mono;
 }
 
 .content-body p  > code,
@@ -222,7 +221,7 @@ tt, code, kbd, samp { @apply .font-mono; }
     @apply .mt-8 .mb-4;
 }
 
-.footnotes ol, .footnote-ref ul {
+.footnotes ol {
     @apply .pl-4;
 }
 
@@ -236,15 +235,19 @@ tt, code, kbd, samp { @apply .font-mono; }
     @apply .text-black;
 }
 
+.content .footnote-ref {
+    @apply .border-0;
+}
+
 .footnote-ref {
     @apply .inline-block .-mt-24 .pt-24;
 }
 
-.footnote-ref a:before {
+.footnote-ref:before {
     content: "[";
     margin-left: 1px;
 }
 
-.footnote-ref a:after {
+.footnote-ref:after {
     content: "]";
 }
