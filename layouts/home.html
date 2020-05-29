@@ -1,10 +1,10 @@
 {{- define "main" -}}
 {{- $home_section := .Site.Params.homesection | default (slice "posts") -}}
 
-<section class="contents">
+<section class="mt-12 leading-normal">
     {{- $paginator := .Paginate (where .Site.RegularPages "Type" "in" $home_section) -}}
     {{- range $paginator.Pages -}}
-        {{ .Render "summary" }}
+    {{ .Render "summary" }}
     {{- end -}}
 </section>
 {{- partial "pagination.html" . -}}

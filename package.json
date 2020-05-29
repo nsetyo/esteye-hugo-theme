@@ -1,14 +1,12 @@
 {
     "name": "esteye-hugo-theme",
     "version": "0.1.0",
-    "description": "Esteya Hugo Theme",
+    "description": "Esteye Hugo Theme",
     "main": "index.js",
-    "scripts": {
-        "build": "tailwind build ./assets/css/style.tailwind.css -o ./assets/css/style.css"
-    },
+    "scripts": {},
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/nsetyo/esteye-hugo-theme.git"
+        "url": "git+https://github.com/nsetyo/esteye-hugo-theme.git"
     },
     "keywords": [
         "hugo",
@@ -17,13 +15,11 @@
     "author": "nsetyo",
     "license": "MIT",
     "bugs": {
-        "url": "https://gitlab.com/nsetyo/esteye-hugo-theme/issues"
+        "url": "https://github.com/nsetyo/esteye-hugo-theme/issues"
     },
-    "homepage": "https://gitlab.com/nsetyo/esteye-hugo-theme#readme",
+    "homepage": "https://github.com/nsetyo/esteye-hugo-theme#readme",
     "devDependencies": {
-        "@fullhuman/postcss-purgecss": "^1.3.0",
-        "autoprefixer": "^9.8.0",
-        "postcss-cli": "^6.1.3",
+        "postcss-cli": "^7.1.1",
         "postcss-import": "^12.0.1",
         "tailwindcss": "^1.4.6"
     }

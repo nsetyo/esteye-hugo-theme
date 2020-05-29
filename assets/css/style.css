@@ -62,10 +62,6 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 /** Main Content ------------------------------------------------------------ */
-.contents {
-    @apply .mt-12 .leading-normal;
-}
-
 .content a:hover {
     @apply .border-solid .text-primary .border-primary;
 }
@@ -116,10 +112,6 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 /** Content Header ------------------------------------------------------------ */
-.content-header {
-    @apply .font-sans;
-}
-
 .content-header a {
     @apply .border-0;
 }
@@ -217,6 +209,19 @@ tt, code, kbd, samp { @apply .font-mono; }
 }
 
 /* Footnotes ---------------------------------------------------------------- */
+.content .footnote-ref {
+    @apply .border-0;
+}
+
+.footnote-ref:before {
+    content: "[";
+    margin-left: 1px;
+}
+
+.footnote-ref:after {
+    content: "]";
+}
+
 .footnotes {
     @apply .mt-8 .mb-4;
 }
@@ -233,21 +238,4 @@ tt, code, kbd, samp { @apply .font-mono; }
 
 .footnotes li:target {
     @apply .text-black;
-}
-
-.content .footnote-ref {
-    @apply .border-0;
-}
-
-.footnote-ref {
-    @apply .inline-block .-mt-24 .pt-24;
-}
-
-.footnote-ref:before {
-    content: "[";
-    margin-left: 1px;
-}
-
-.footnote-ref:after {
-    content: "]";
 }
